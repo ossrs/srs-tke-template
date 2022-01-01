@@ -1,4 +1,5 @@
 
+
 apiVersion: v1
 kind: ConfigMap
 metadata:
@@ -45,19 +46,19 @@ spec:
         app: srs
     spec:
       volumes:
-        - name: config-volume
-          configMap:
-            name: srs-config
+      - name: config-volume
+        configMap:
+          name: srs-config
       containers:
         - name: srs
           image: ossrs/srs:3
           ports:
-            - containerPort: 1935
-            - containerPort: 1985
-            - containerPort: 8080
-        volumeMounts:
-        - name: config-volume
-          mountPath: /usr/local/srs/conf
+          - containerPort: 1935
+          - containerPort: 1985
+          - containerPort: 8080
+          volumeMounts:
+          - name: config-volume
+            mountPath: /usr/local/srs/conf
 
 ---
 
