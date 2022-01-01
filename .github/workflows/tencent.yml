@@ -23,11 +23,11 @@ jobs:
           cluster_id: ${{ secrets.TKE_CLUSTER_ID }}
           tke_region: ${{ secrets.TKE_REGION }}
 
-      - name: Switch to TKE context
-        run: |
-          kubectl config use-context ${{ secrets.TKE_REGION }}-context-default
+      #- name: Switch to TKE context
+      #  run: |
+      #    kubectl config use-context ${{ secrets.TKE_REGION }}-context-default
 
       # Deploy the Docker image to the TKE cluster
       - name: Deploy
         run: |
-          kubectl get services -o wide
+          kubectl cluster-info
