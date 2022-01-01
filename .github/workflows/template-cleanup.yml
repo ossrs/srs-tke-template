@@ -26,10 +26,11 @@ jobs:
         run: |
           # Prepare variables.
           NAME="${GITHUB_REPOSITORY##*/}"
+          TMPL_NAME="srs-tke-template"
 
           # Replace repository name and links.
-          sed -i "s|ossrs/srs-tke-template|${{ github.repository }}|g" README.md
-          sed -i "s/srs-tke-template/$NAME/g" README.md
+          sed -i "s|ossrs/$TMPL_NAME|${{ github.repository }}|g" README.md
+          sed -i "s/$TMPL_NAME/$NAME/g" README.md
 
           # Cleanup
           rm -f .github/workflows/template-cleanup.yml
