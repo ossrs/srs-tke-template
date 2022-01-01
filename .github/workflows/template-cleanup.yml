@@ -11,7 +11,7 @@ jobs:
   template-cleanup:
     name: Template Cleanup
     runs-on: ubuntu-latest
-    if: github.event.repository.name != 'srs-ack-template'
+    if: github.event.repository.name != 'srs-tke'
     steps:
 
       # Check out current repository
@@ -23,7 +23,7 @@ jobs:
         run: |
           # Replace repository name and links.
           NAME="${GITHUB_REPOSITORY##*/}"
-          sed -i "s/srs-ack-template/$NAME/g" README.md
+          sed -i "s/srs-tke/$NAME/g" README.md
 
           # Cleanup
           rm -f .github/workflows/template-cleanup.yml
