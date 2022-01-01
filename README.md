@@ -1,2 +1,4 @@
-# srs-eks
-Template repository for deploying SRS to EKS(Amazon Elastic Kubernetes Service)
+# srs-tke
+
+Template repository for deploying SRS to TKE(Tencent Kubernetes Engine)
+
