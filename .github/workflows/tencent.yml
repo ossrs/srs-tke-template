@@ -1,19 +1,15 @@
 
-name: Tencent Kubernetes Engine
+name: Deploy SRS to TKE
 
 on:
   push:
     branches:
       - main
 
-env:
-  TKE_REGION: ap-guangzhou
-
 jobs:
-  setup-build-publish-deploy:
-    name: Setup, Build, Publish, and Deploy
-    runs-on: ubuntu-latest
-    environment: production
+  k8s:
+    name: release-k8s
+    runs-on: ubuntu-20.04
     steps:
 
       - name: Checkout
@@ -25,7 +21,7 @@ jobs:
           secret_id: ${{ secrets.TENCENT_CLOUD_SECRET_ID }}
           secret_key: ${{ secrets.TENCENT_CLOUD_SECRET_KEY }}
           cluster_id: ${{ secrets.TKE_CLUSTER_ID }}
-          tke_region: ${{ env.TKE_REGION }}
+          tke_region: ${{ secrets.TKE_REGION }}
 
       - name: Switch to TKE context
         run: |
