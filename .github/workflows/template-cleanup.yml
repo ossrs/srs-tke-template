@@ -28,7 +28,7 @@ jobs:
           NAME="${GITHUB_REPOSITORY##*/}"
 
           # Replace repository name and links.
-          sed -i "s|ossrs/srs-ack-template|${{ github.repository }}|g" README.md
+          sed -i "s|ossrs/srs-tke-template|${{ github.repository }}|g" README.md
           sed -i "s/srs-tke-template/$NAME/g" README.md
 
           # Cleanup
