@@ -24,6 +24,7 @@ jobs:
       #   NAME                Hello-World
       - name: Cleanup
         run: |
+          # Prepare variables.
           NAME="${GITHUB_REPOSITORY##*/}"
 
           # Replace repository name and links.
