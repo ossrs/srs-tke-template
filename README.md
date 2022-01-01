@@ -11,7 +11,7 @@ Template repository for deploying SRS to [TKE(Tencent Kubernetes Engine)](https:
 1. Create a K8s cluster by [TKE](https://console.cloud.tencent.com/tke2/cluster?rid=8), check by command `kubectl get namespace`
 1. Create a new [CAM user](https://console.cloud.tencent.com/cam), with access <kbd>AdministratorAccess</kbd>
 
-**Step 2:** Click the <kbd>Use this template</kbd> to create your repository, then set the [secrets](https://github.com/winlinvip/srs-tke-template/settings/secrets/actions):
+**Step 2:** Click the <kbd>Use this template</kbd> to create your repository, then set the [secrets](https://github.com/ossrs/srs-tke-template/settings/secrets/actions):
 
 1. `TENCENT_CLOUD_SECRET_ID` is the SecretId of [CAM user](https://console.cloud.tencent.com/cam).
 1. `TENCENT_CLOUD_SECRET_KEY` is the SecretKey of [CAM user](https://console.cloud.tencent.com/cam).

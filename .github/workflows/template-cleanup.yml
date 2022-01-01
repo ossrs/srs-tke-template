@@ -1,5 +1,6 @@
 # This workflow is supposed to be triggered automatically when a new template-based repository has been created.
 # @see https://github.com/JetBrains/intellij-platform-plugin-template/blob/main/.github/workflows/template-cleanup.yml
+# @see https://docs.github.com/en/actions/learn-github-actions/contexts#github-context
 
 name: Template Cleanup
 on:
@@ -19,10 +20,14 @@ jobs:
         uses: actions/checkout@v2.4.0
 
       # Cleanup project
+      #   github.repository   Codertocat/Hello-World
+      #   NAME                Hello-World
       - name: Cleanup
         run: |
-          # Replace repository name and links.
           NAME="${GITHUB_REPOSITORY##*/}"
+
+          # Replace repository name and links.
+          sed -i "s|ossrs/srs-ack-template|${{ github.repository }}|g" README.md
           sed -i "s/srs-tke-template/$NAME/g" README.md
 
           # Cleanup
