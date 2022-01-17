@@ -1,6 +1,6 @@
 # srs-tke-template
 
-![](http://ossrs.net/gif/v1/sls.gif?site=github.com&path=/k8s/tke/ossrs/srs-tke-template)
+![](http://ossrs.net/gif/v1/sls.gif?site=github.com&path=/tmpl/k8s/tke/ossrs/srs-tke-template)
 [![](https://github.com/ossrs/srs-tke-template/actions/workflows/tencent.yml/badge.svg)](https://github.com/ossrs/srs-tke-template/actions/workflows/tencent.yml)
 
 Template repository for deploying SRS to [TKE(Tencent Kubernetes Engine)](https://cloud.tencent.com/document/product/457/6759).
