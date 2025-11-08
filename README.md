@@ -1,5 +1,7 @@
 # srs-tke-template
 
+**IMPORTANT NOTE**: This repository is depreacated and archived, please use [srs-cdk](https://github.com/ossrs/srs-cdk) instead. CDK is the future of default and recommended deployment for SRS and Oryx.
+
 ![](http://ossrs.net/gif/v1/sls.gif?site=github.com&path=/tmpl/k8s/tke/ossrs/srs-tke-template)
 [![](https://github.com/ossrs/srs-tke-template/actions/workflows/tencent.yml/badge.svg)](https://github.com/ossrs/srs-tke-template/actions/workflows/tencent.yml)
 
